@@ -31,8 +31,7 @@ public class ChatActivity extends AppCompatActivity {
     // Static Class Methods
     //==============================================================================================
 
-    public static void start(Context context)
-    {
+    public static void start(Context context) {
         Intent starter = new Intent(context, ChatActivity.class);
         context.startActivity(starter);
     }
@@ -84,9 +83,14 @@ public class ChatActivity extends AppCompatActivity {
     }
 
     @Override
-    public void onBackPressed()
-    {
+    public void onBackPressed() {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
     }
 }

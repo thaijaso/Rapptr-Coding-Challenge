@@ -12,7 +12,7 @@ import com.datechnologies.androidtest.R;
 /**
  * Screen that displays the D & A Technologies logo.
  * The icon can be moved around on the screen as well as animated.
- * */
+ */
 
 public class AnimationActivity extends AppCompatActivity {
 
@@ -24,8 +24,7 @@ public class AnimationActivity extends AppCompatActivity {
     // Static Class Methods
     //==============================================================================================
 
-    public static void start(Context context)
-    {
+    public static void start(Context context) {
         Intent starter = new Intent(context, AnimationActivity.class);
         context.startActivity(starter);
     }
@@ -57,9 +56,14 @@ public class AnimationActivity extends AppCompatActivity {
     }
 
     @Override
-    public void onBackPressed()
-    {
+    public void onBackPressed() {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
     }
 }

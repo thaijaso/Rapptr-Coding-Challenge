@@ -11,7 +11,6 @@ import com.datechnologies.androidtest.R;
 
 /**
  * A screen that displays a login prompt, allowing the user to login to the D & A Technologies Web Server.
- *
  */
 public class LoginActivity extends AppCompatActivity {
 
@@ -19,8 +18,7 @@ public class LoginActivity extends AppCompatActivity {
     // Static Class Methods
     //==============================================================================================
 
-    public static void start(Context context)
-    {
+    public static void start(Context context) {
         Intent starter = new Intent(context, LoginActivity.class);
         context.startActivity(starter);
     }
@@ -59,9 +57,14 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     @Override
-    public void onBackPressed()
-    {
+    public void onBackPressed() {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
     }
 }
