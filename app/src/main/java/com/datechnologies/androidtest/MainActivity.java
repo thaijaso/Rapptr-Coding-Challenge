@@ -39,9 +39,6 @@ public class MainActivity extends AppCompatActivity {
          * Thank you and Good luck. -  D & A Technologies
          * =========================================================================================
          */
-
-        // TODO: Make the UI look like it does in the mock-up
-        // TODO: Add a ripple effect when the buttons are clicked
     }
 
     //==============================================================================================
