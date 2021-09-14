@@ -2,19 +2,19 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android" >
     <item android:state_pressed="true" >
         <shape android:shape="rectangle"  >
-            <corners android:radius="8dip" />
+            <corners android:radius="@dimen/main_activity_button_border_radius" />
             <solid android:color="@color/background"/>
         </shape>
     </item>
     <item android:state_focused="true">
         <shape android:shape="rectangle"  >
-            <corners android:radius="8dip" />
+            <corners android:radius="@dimen/main_activity_button_border_radius" />
             <solid android:color="@color/background"/>
         </shape>
     </item>
     <item >
         <shape android:shape="rectangle"  >
-            <corners android:radius="8dip" />
+            <corners android:radius="@dimen/main_activity_button_border_radius" />
             <solid android:color="@color/background"/>
         </shape>
     </item>

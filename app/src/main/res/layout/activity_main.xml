@@ -31,11 +31,9 @@
             android:gravity="left|center_vertical"
             android:onClick="onChatClicked"
             android:paddingLeft="@dimen/main_activity_button_padding_left"
-            android:radius="@dimen/main_activity_button_border_radius"
             android:text="@string/chat_button"
             android:textSize="@dimen/button_text_size"
-            android:background="@drawable/round_button"
-            android:elevation="2dp" />
+            android:background="@drawable/round_button" />
 
         <Button
             android:layout_width="match_parent"
@@ -48,7 +46,6 @@
             android:gravity="left|center_vertical"
             android:onClick="onLoginClicked"
             android:paddingLeft="@dimen/main_activity_button_padding_left"
-            android:radius="@dimen/main_activity_button_border_radius"
             android:text="@string/login_button"
             android:textSize="@dimen/button_text_size"
             android:background="@drawable/round_button" />
@@ -64,7 +61,6 @@
             android:gravity="left|center_vertical"
             android:onClick="onAnimationClicked"
             android:paddingLeft="@dimen/main_activity_button_padding_left"
-            android:radius="@dimen/main_activity_button_border_radius"
             android:text="@string/animation_button"
             android:textSize="@dimen/button_text_size"
             android:background="@drawable/round_button" />
