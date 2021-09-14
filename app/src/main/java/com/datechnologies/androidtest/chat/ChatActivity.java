@@ -50,7 +50,7 @@ public class ChatActivity extends AppCompatActivity {
 
         assert actionBar != null;
         actionBar.setDisplayHomeAsUpEnabled(true);
-        actionBar.setDisplayShowHomeEnabled(true);
+        // actionBar.setDisplayShowHomeEnabled(true);
 
         chatAdapter = new ChatAdapter();
 

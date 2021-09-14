@@ -4,7 +4,7 @@
     <!-- Main Screen Strings -->
     <string name="activity_main_title">Coding Tasks</string>
     <string name="chat_button">CHAT</string>
-    <string name="login_button">LOG IN</string>
+    <string name="login_button">LOGIN</string>
     <string name="animation_button">ANIMATION</string>
 
 </resources>

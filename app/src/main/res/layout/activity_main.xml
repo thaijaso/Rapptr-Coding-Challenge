@@ -3,36 +3,71 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginLeft="@dimen/activity_horizontal_margin"
-    android:layout_marginRight="@dimen/activity_horizontal_margin"
     tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/gpc_background" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/main_activity_button_margin_left"
+        android:layout_marginRight="@dimen/main_activity_button_margin_right"
         android:gravity="center"
         android:orientation="vertical">
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/main_activity_button_margin_bottom"
+            android:height="@dimen/main_activity_button_height"
+            android:alpha="0.8"
+            android:drawableLeft="@drawable/ic_chat"
+            android:drawablePadding="@dimen/activity_horizontal_margin"
+            android:gravity="left|center_vertical"
             android:onClick="onChatClicked"
+            android:paddingLeft="@dimen/main_activity_button_padding_left"
+            android:radius="@dimen/main_activity_button_border_radius"
             android:text="@string/chat_button"
-            android:textSize="@dimen/button_text_size" />
+            android:textSize="@dimen/button_text_size"
+            android:background="@drawable/round_button"
+            android:elevation="2dp" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/main_activity_button_margin_bottom"
+            android:height="@dimen/main_activity_button_height"
+            android:alpha="0.8"
+            android:drawableLeft="@drawable/ic_lock"
+            android:drawablePadding="@dimen/activity_horizontal_margin"
+            android:gravity="left|center_vertical"
             android:onClick="onLoginClicked"
+            android:paddingLeft="@dimen/main_activity_button_padding_left"
+            android:radius="@dimen/main_activity_button_border_radius"
             android:text="@string/login_button"
-            android:textSize="@dimen/button_text_size" />
+            android:textSize="@dimen/button_text_size"
+            android:background="@drawable/round_button" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/main_activity_button_margin_bottom"
+            android:height="@dimen/main_activity_button_height"
+            android:alpha="0.8"
+            android:drawableLeft="@drawable/ic_animation"
+            android:drawablePadding="@dimen/activity_horizontal_margin"
+            android:gravity="left|center_vertical"
             android:onClick="onAnimationClicked"
+            android:paddingLeft="@dimen/main_activity_button_padding_left"
+            android:radius="@dimen/main_activity_button_border_radius"
             android:text="@string/animation_button"
-            android:textSize="@dimen/button_text_size" />
+            android:textSize="@dimen/button_text_size"
+            android:background="@drawable/round_button" />
 
     </LinearLayout>
 

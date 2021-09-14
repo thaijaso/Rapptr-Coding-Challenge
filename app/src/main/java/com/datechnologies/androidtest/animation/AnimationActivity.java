@@ -42,7 +42,7 @@ public class AnimationActivity extends AppCompatActivity {
 
         assert actionBar != null;
         actionBar.setDisplayHomeAsUpEnabled(true);
-        actionBar.setDisplayShowHomeEnabled(true);
+        // actionBar.setDisplayShowHomeEnabled(true);
 
         // TODO: Make the UI look like it does in the mock-up. Allow for horizontal screen rotation.
         // TODO: Add a ripple effect when the buttons are clicked
