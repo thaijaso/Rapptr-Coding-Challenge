@@ -4,6 +4,7 @@
     <color name="colorPrimaryDark">#0B496D</color>
     <color name="colorAccent">#000000</color>
     <color name="background">#F9F9F9</color>
+    <color name="transparent_background">#66F9F9F9</color>
     <color name="button_blue">#0E5C89</color>
     <color name="chat_text">#1B1E1F</color>
 </resources>

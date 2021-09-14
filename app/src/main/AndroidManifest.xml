@@ -22,7 +22,10 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".chat.ChatActivity" />
         <activity android:name=".animation.AnimationActivity" />
-        <activity android:name=".login.LoginActivity" />
+        <activity
+            android:name=".login.LoginActivity"
+            android:screenOrientation="fullSensor"
+            android:configChanges="orientation|screenSize" />
     </application>
 
 </manifest>

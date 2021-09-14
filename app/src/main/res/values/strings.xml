@@ -1,10 +1,15 @@
 <resources>
     <string name="app_name">AndroidTest</string>
 
-    <!-- Main Screen Strings -->
+    <!-- Home Screen Strings -->
     <string name="activity_main_title">Coding Tasks</string>
     <string name="chat_button">CHAT</string>
     <string name="login_button">LOGIN</string>
     <string name="animation_button">ANIMATION</string>
+
+    <!-- Login Screen Strings -->
+    <string name="activity_login_title">Login</string>
+    <string name="activity_login_username_edit_text">Username</string>
+    <string name="activity_login_password_edit_text">Password</string>
 
 </resources>
