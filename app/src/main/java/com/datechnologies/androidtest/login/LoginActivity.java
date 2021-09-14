@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 
 import com.datechnologies.androidtest.MainActivity;
 import com.datechnologies.androidtest.R;
@@ -13,6 +15,8 @@ import com.datechnologies.androidtest.R;
  * A screen that displays a login prompt, allowing the user to login to the D & A Technologies Web Server.
  */
 public class LoginActivity extends AppCompatActivity {
+
+    public static String TAG = "LoginActivity";
 
     //==============================================================================================
     // Static Class Methods
@@ -63,5 +67,9 @@ public class LoginActivity extends AppCompatActivity {
     public boolean onSupportNavigateUp() {
         onBackPressed();
         return true;
+    }
+
+    public void onLoginClicked(View v) {
+        Log.i(TAG, "login clicked");
     }
 }

@@ -47,7 +47,8 @@
             android:height="@dimen/login_activity_button_height"
             android:backgroundTint="@color/colorPrimary"
             android:text="@string/login_button"
-            android:textColor="@color/background" />
+            android:textColor="@color/background"
+            android:onClick="onLoginClicked" />
 
     </LinearLayout>
 
