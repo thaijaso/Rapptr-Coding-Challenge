@@ -33,7 +33,10 @@
             android:paddingLeft="@dimen/main_activity_button_padding_left"
             android:text="@string/chat_button"
             android:textSize="@dimen/button_text_size"
-            android:background="@drawable/round_button" />
+            android:background="@drawable/round_button"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground" />
 
         <Button
             android:layout_width="match_parent"
@@ -48,7 +51,10 @@
             android:paddingLeft="@dimen/main_activity_button_padding_left"
             android:text="@string/login_button"
             android:textSize="@dimen/button_text_size"
-            android:background="@drawable/round_button" />
+            android:background="@drawable/round_button"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground" />
 
         <Button
             android:layout_width="match_parent"
@@ -63,7 +69,10 @@
             android:paddingLeft="@dimen/main_activity_button_padding_left"
             android:text="@string/animation_button"
             android:textSize="@dimen/button_text_size"
-            android:background="@drawable/round_button" />
+            android:background="@drawable/round_button"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground" />
 
     </LinearLayout>
 
