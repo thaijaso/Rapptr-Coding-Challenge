@@ -6,6 +6,7 @@
     tools:context="com.datechnologies.androidtest.animation.AnimationActivity">
 
     <ImageView
+        android:id="@+id/logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/animation_activity_logo_margin_top"
@@ -21,6 +22,7 @@
         android:layout_margin="@dimen/animation_activity_button_margins"
         android:backgroundTint="@color/colorPrimary"
         android:text="@string/activity_animation_button"
-        android:textColor="@color/background" />
+        android:textColor="@color/background"
+        android:onClick="onFadeButtonClicked" />
 
 </RelativeLayout>

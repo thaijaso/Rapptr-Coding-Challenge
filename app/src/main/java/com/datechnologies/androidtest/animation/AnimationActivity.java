@@ -5,6 +5,15 @@ import android.content.Intent;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.view.animation.AccelerateInterpolator;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
+import android.view.animation.AnimationSet;
+import android.view.animation.AnimationUtils;
+import android.view.animation.DecelerateInterpolator;
+import android.widget.ImageView;
 
 import com.datechnologies.androidtest.MainActivity;
 import com.datechnologies.androidtest.R;
@@ -15,6 +24,8 @@ import com.datechnologies.androidtest.R;
  */
 
 public class AnimationActivity extends AppCompatActivity {
+
+    private static final String TAG = "AnimationActivity";
 
     //==============================================================================================
     // Class Properties
@@ -45,9 +56,6 @@ public class AnimationActivity extends AppCompatActivity {
         actionBar.setDisplayHomeAsUpEnabled(true);
         // actionBar.setDisplayShowHomeEnabled(true);
 
-        // TODO: Make the UI look like it does in the mock-up. Allow for horizontal screen rotation.
-        // TODO: Add a ripple effect when the buttons are clicked
-
         // TODO: When the fade button is clicked, you must animate the D & A Technologies logo.
         // TODO: It should fade from 100% alpha to 0% alpha, and then from 0% alpha to 100% alpha
 
@@ -66,5 +74,19 @@ public class AnimationActivity extends AppCompatActivity {
     public boolean onSupportNavigateUp() {
         onBackPressed();
         return true;
+    }
+
+    public void onFadeButtonClicked(View v) {
+        Log.i(TAG, "fade button clicked");
+
+        ImageView logo = findViewById(R.id.logo);
+
+        // https://stackoverflow.com/questions/6796139/fade-in-fade-out-android-animation-in-java
+        Animation fadeOut = new AlphaAnimation(1, 0);
+        fadeOut.setDuration(1000);
+        fadeOut.setRepeatCount(1);
+        fadeOut.setRepeatMode(Animation.REVERSE);
+
+        logo.startAnimation(fadeOut);
     }
 }
