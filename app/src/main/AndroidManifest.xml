@@ -22,7 +22,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
-        <activity android:name=".chat.ChatActivity" />
+        <activity
+            android:name=".chat.ChatActivity"
+            android:screenOrientation="fullSensor" />
         <activity android:name=".animation.AnimationActivity" />
         <activity
             android:name=".login.LoginActivity"

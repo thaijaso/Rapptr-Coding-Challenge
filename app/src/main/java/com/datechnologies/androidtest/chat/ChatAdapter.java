@@ -16,10 +16,8 @@ import java.util.List;
 
 /**
  * A recycler view adapter used to display chat log messages in {@link ChatActivity}.
-
  */
-public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ChatViewHolder>
-{
+public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ChatViewHolder> {
     //==============================================================================================
     // Class Properties
     //==============================================================================================
@@ -30,8 +28,7 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ChatViewHolder
     // Constructor
     //==============================================================================================
 
-    public ChatAdapter()
-    {
+    public ChatAdapter() {
         chatLogMessageModelList = new ArrayList<>();
     }
 
@@ -39,8 +36,7 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ChatViewHolder
     // Class Instance Methods
     //==============================================================================================
 
-    public void setChatLogMessageModelList(List<ChatLogMessageModel> chatLogMessageModelList)
-    {
+    public void setChatLogMessageModelList(List<ChatLogMessageModel> chatLogMessageModelList) {
         this.chatLogMessageModelList = chatLogMessageModelList;
         notifyDataSetChanged();
     }
@@ -50,8 +46,7 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ChatViewHolder
     //==============================================================================================
 
     @Override
-    public ChatViewHolder onCreateViewHolder(ViewGroup parent, int viewType)
-    {
+    public ChatViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.
                 from(parent.getContext()).
                 inflate(R.layout.item_chat, parent, false);
@@ -60,16 +55,15 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ChatViewHolder
     }
 
     @Override
-    public void onBindViewHolder(ChatViewHolder viewHolder, int position)
-    {
+    public void onBindViewHolder(ChatViewHolder viewHolder, int position) {
         ChatLogMessageModel chatLogMessageModel = chatLogMessageModelList.get(position);
 
         viewHolder.messageTextView.setText(chatLogMessageModel.message);
+        viewHolder.nameTextView.setText(chatLogMessageModel.username);
     }
 
     @Override
-    public int getItemCount()
-    {
+    public int getItemCount() {
         return chatLogMessageModelList.size();
     }
 
@@ -77,16 +71,16 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ChatViewHolder
     // ChatViewHolder Class
     //==============================================================================================
 
-    public static class ChatViewHolder extends RecyclerView.ViewHolder
-    {
+    public static class ChatViewHolder extends RecyclerView.ViewHolder {
         ImageView avatarImageView;
         TextView messageTextView;
+        TextView nameTextView;
 
-        public ChatViewHolder(View view)
-        {
+        public ChatViewHolder(View view) {
             super(view);
-            avatarImageView = (ImageView)view.findViewById(R.id.avatarImageView);
-            messageTextView = (TextView)view.findViewById(R.id.messageTextView);
+            avatarImageView = (ImageView) view.findViewById(R.id.avatarImageView);
+            messageTextView = (TextView) view.findViewById(R.id.messageTextView);
+            nameTextView = (TextView) view.findViewById(R.id.nameTextView);
         }
     }
 

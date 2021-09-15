@@ -43,6 +43,7 @@ public class ChatActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
+        setTitle(R.string.activity_chat_title);
 
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
 
@@ -64,6 +65,7 @@ public class ChatActivity extends AppCompatActivity {
 
         ChatLogMessageModel chatLogMessageModel = new ChatLogMessageModel();
         chatLogMessageModel.message = "This is test data. Please retrieve real data.";
+        chatLogMessageModel.username = "Alex";
 
         tempList.add(chatLogMessageModel);
         tempList.add(chatLogMessageModel);

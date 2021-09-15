@@ -12,4 +12,6 @@
     <string name="activity_login_username_edit_text">Username</string>
     <string name="activity_login_password_edit_text">Password</string>
 
+    <!-- Chat Screen Strings -->
+    <string name="activity_chat_title">Chat</string>
 </resources>

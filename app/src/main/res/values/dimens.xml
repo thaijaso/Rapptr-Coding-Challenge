@@ -27,6 +27,15 @@
     <!-- Login screen Button height, per the Android Design guidelines. -->
     <dimen name="login_activity_button_height">55dp</dimen>
 
+    <!-- Chat screen ImageView margins, per the Android Design guidelines. -->
+    <dimen name="chat_activity_image_margin_right">7dp</dimen>
+    <!-- Chat screen message TextView padding, per the Android Design guidelines.  -->
+    <dimen name="chat_activity_message_text_view_padding">8dp</dimen>
+    <dimen name="chat_activity_message_text_view_margin_right">21dp</dimen>
+    <!-- Chat screen name TextView margins, per the Android Design guidelines. -->
+    <dimen name="chat_activity_name_text_view_margin_left">8dp</dimen>
+    <dimen name="chat_activity_name_text_view_margin_bottom">4dp</dimen>
+
     <!-- Text Sizes -->
     <dimen name="button_text_size">16sp</dimen>
 
