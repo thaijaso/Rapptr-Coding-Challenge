@@ -28,7 +28,8 @@
             android:layout_marginTop="@dimen/login_activity_edit_text_margin_top"
             android:layout_marginBottom="@dimen/login_activity_edit_text_margin_bottom"
             android:backgroundTint="@color/colorPrimary"
-            android:hint="@string/activity_login_username_edit_text" />
+            android:hint="@string/activity_login_username_edit_text"
+            android:inputType="textVisiblePassword" />
 
         <EditText
             android:id="@+id/password"

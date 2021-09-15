@@ -7,18 +7,28 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 
 import com.datechnologies.androidtest.MainActivity;
 import com.datechnologies.androidtest.R;
 import com.datechnologies.androidtest.api.ChatLogMessageModel;
+import com.datechnologies.androidtest.api.MessageResponse;
+import com.datechnologies.androidtest.api.MessageService;
+import com.datechnologies.androidtest.api.RetrofitClient;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 /**
  * Screen that displays a list of chats from a chat log.
  */
 public class ChatActivity extends AppCompatActivity {
+
+    public static String TAG = "ChatActivity";
 
     //==============================================================================================
     // Class Properties
@@ -53,7 +63,7 @@ public class ChatActivity extends AppCompatActivity {
         actionBar.setDisplayHomeAsUpEnabled(true);
         // actionBar.setDisplayShowHomeEnabled(true);
 
-        chatAdapter = new ChatAdapter();
+        chatAdapter = new ChatAdapter(this);
 
         recyclerView.setAdapter(chatAdapter);
         recyclerView.setHasFixedSize(true);
@@ -61,27 +71,30 @@ public class ChatActivity extends AppCompatActivity {
                 LinearLayoutManager.VERTICAL,
                 false));
 
-        List<ChatLogMessageModel> tempList = new ArrayList<>();
+        performGetMessagesRequest();
+    }
 
-        ChatLogMessageModel chatLogMessageModel = new ChatLogMessageModel();
-        chatLogMessageModel.message = "This is test data. Please retrieve real data.";
-        chatLogMessageModel.username = "Alex";
+    private void performGetMessagesRequest() {
+        MessageService messageService = RetrofitClient.getInstance().create(MessageService.class);
+        Call<MessageResponse> call = messageService.getMessages();
 
-        tempList.add(chatLogMessageModel);
-        tempList.add(chatLogMessageModel);
-        tempList.add(chatLogMessageModel);
-        tempList.add(chatLogMessageModel);
-        tempList.add(chatLogMessageModel);
-        tempList.add(chatLogMessageModel);
-        tempList.add(chatLogMessageModel);
-        tempList.add(chatLogMessageModel);
+        call.enqueue(new Callback<MessageResponse>() {
+            @Override
+            public void onResponse(Call<MessageResponse> call, Response<MessageResponse> response) {
+                Log.i(TAG, "Get messages response success");
+                handleGetMessagesResponse(response.body());
+            }
 
-        chatAdapter.setChatLogMessageModelList(tempList);
+            @Override
+            public void onFailure(Call<MessageResponse> call, Throwable t) {
+                Log.i(TAG, "Get messages request failed");
+            }
+        });
+    }
 
-        // TODO: Make the UI look like it does in the mock-up. Allow for horizontal screen rotation.
-
-        // TODO: Retrieve the chat data from http://dev.rapptrlabs.com/Tests/scripts/chat_log.php
-        // TODO: Parse this chat data from JSON into ChatLogMessageModel and display it.
+    private void handleGetMessagesResponse(MessageResponse messageResponse) {
+        List<ChatLogMessageModel> messages = messageResponse.getData();
+        chatAdapter.setChatLogMessageModelList(messages);
     }
 
     @Override
