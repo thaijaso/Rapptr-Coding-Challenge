@@ -35,6 +35,10 @@
     <!-- Chat screen name TextView margins, per the Android Design guidelines. -->
     <dimen name="chat_activity_name_text_view_margin_left">8dp</dimen>
     <dimen name="chat_activity_name_text_view_margin_bottom">4dp</dimen>
+    <!-- Chat screen CircleImageView width, height, and border width -->
+    <dimen name="chat_activity_circle_image_width">32dp</dimen>
+    <dimen name="chat_activity_circle_image_height">32dp</dimen>
+    <dimen name="chat_activity_circle_image_border_width">2dp</dimen>
 
     <!-- Text Sizes -->
     <dimen name="button_text_size">16sp</dimen>

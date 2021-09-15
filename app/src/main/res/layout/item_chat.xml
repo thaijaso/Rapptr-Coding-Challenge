@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="?android:selectableItemBackground"
     android:clickable="true"
     android:gravity="top"
@@ -10,15 +11,15 @@
     tools:background="@color/background"
     tools:ignore="UseCompoundDrawables">
 
-    <ImageView
+    <com.mikhaellopez.circularimageview.CircularImageView
         android:id="@+id/avatarImageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/chat_activity_circle_image_width"
+        android:layout_height="@dimen/chat_activity_circle_image_height"
+        android:src="@drawable/ic_avatar_placeholder"
+        app:civ_border_width="@dimen/chat_activity_circle_image_border_width"
         android:layout_marginLeft="@dimen/activity_horizontal_margin"
         android:layout_marginRight="@dimen/chat_activity_image_margin_right"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:src="@drawable/ic_avatar_placeholder"
-        tools:ignore="RtlHardcoded" />
+        android:layout_marginTop="@dimen/activity_vertical_margin" />
 
     <LinearLayout
         android:layout_width="match_parent"
