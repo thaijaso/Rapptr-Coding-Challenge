@@ -14,4 +14,8 @@
 
     <!-- Chat Screen Strings -->
     <string name="activity_chat_title">Chat</string>
+
+    <!-- Animation Screen Strings   -->
+    <string name="activity_animation_title">Animation</string>
+    <string name="activity_animation_button">FADE IN</string>
 </resources>

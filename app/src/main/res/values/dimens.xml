@@ -40,6 +40,14 @@
     <dimen name="chat_activity_circle_image_height">32dp</dimen>
     <dimen name="chat_activity_circle_image_border_width">2dp</dimen>
 
+    <!-- Animation screen logo margins, per the Android Design guidelines.   -->
+    <dimen name="animation_activity_logo_margin_top">100dp</dimen>
+    <dimen name="animation_activity_logo_margin_left">23dp</dimen>
+    <dimen name="animation_activity_logo_margin_right">22dp</dimen>
+    <!-- Animation screen button height   -->
+    <dimen name="animation_activity_button_height">55dp</dimen>
+    <dimen name="animation_activity_button_margins">30dp</dimen>
+
     <!-- Text Sizes -->
     <dimen name="button_text_size">16sp</dimen>
 

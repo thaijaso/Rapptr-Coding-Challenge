@@ -8,7 +8,19 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/animation_activity_logo_margin_top"
+        android:layout_marginLeft="@dimen/animation_activity_logo_margin_left"
+        android:layout_marginRight="@dimen/animation_activity_logo_margin_right"
+        android:layout_centerHorizontal="true"
         android:src="@drawable/gpc_logo" />
+    
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/animation_activity_button_height"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/animation_activity_button_margins"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="@string/activity_animation_button"
+        android:textColor="@color/background" />
 
 </RelativeLayout>

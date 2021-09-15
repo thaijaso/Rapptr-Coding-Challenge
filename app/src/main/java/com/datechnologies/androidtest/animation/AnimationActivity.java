@@ -37,6 +37,7 @@ public class AnimationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_animation);
+        setTitle(R.string.activity_animation_title);
 
         ActionBar actionBar = getSupportActionBar();
 

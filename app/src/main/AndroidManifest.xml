@@ -21,11 +21,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".chat.ChatActivity"
             android:screenOrientation="fullSensor" />
-        <activity android:name=".animation.AnimationActivity" />
+        <activity
+            android:name=".animation.AnimationActivity"
+            android:screenOrientation="fullSensor"
+            android:configChanges="orientation|screenSize" />
         <activity
             android:name=".login.LoginActivity"
             android:screenOrientation="fullSensor"
