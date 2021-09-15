@@ -56,9 +56,6 @@ public class AnimationActivity extends AppCompatActivity {
         actionBar.setDisplayHomeAsUpEnabled(true);
         // actionBar.setDisplayShowHomeEnabled(true);
 
-        // TODO: When the fade button is clicked, you must animate the D & A Technologies logo.
-        // TODO: It should fade from 100% alpha to 0% alpha, and then from 0% alpha to 100% alpha
-
         // TODO: The user should be able to touch and drag the D & A Technologies logo around the screen.
 
         // TODO: Add a bonus to make yourself stick out. Music, color, fireworks, explosions!!!
@@ -82,11 +79,11 @@ public class AnimationActivity extends AppCompatActivity {
         ImageView logo = findViewById(R.id.logo);
 
         // https://stackoverflow.com/questions/6796139/fade-in-fade-out-android-animation-in-java
-        Animation fadeOut = new AlphaAnimation(1, 0);
-        fadeOut.setDuration(1000);
-        fadeOut.setRepeatCount(1);
-        fadeOut.setRepeatMode(Animation.REVERSE);
+        Animation fadeOutFadeIn = new AlphaAnimation(1, 0);
+        fadeOutFadeIn.setDuration(1000);
+        fadeOutFadeIn.setRepeatCount(1);
+        fadeOutFadeIn.setRepeatMode(Animation.REVERSE);
 
-        logo.startAnimation(fadeOut);
+        logo.startAnimation(fadeOutFadeIn);
     }
 }
