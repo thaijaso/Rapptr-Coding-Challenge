@@ -1,5 +1,7 @@
 package com.datechnologies.androidtest;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -13,6 +15,19 @@ import com.datechnologies.androidtest.login.LoginActivity;
  */
 
 public class MainActivity extends AppCompatActivity {
+
+    //==============================================================================================
+    // Static Class Methods
+    //==============================================================================================
+
+    public static void start(Context context) {
+        Intent starter = new Intent(context, MainActivity.class);
+        context.startActivity(starter);
+    }
+
+    //==============================================================================================
+    // Lifecycle Methods
+    //==============================================================================================
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

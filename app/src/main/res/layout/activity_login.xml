@@ -20,6 +20,7 @@
         android:orientation="vertical">
 
         <EditText
+            android:id="@+id/username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/login_activity_edit_text_margin_left"
@@ -30,12 +31,14 @@
             android:hint="@string/activity_login_username_edit_text" />
 
         <EditText
+            android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/login_activity_edit_text_margin_left"
             android:layout_marginRight="@dimen/login_activity_edit_text_margin_right"
             android:backgroundTint="@color/colorPrimary"
-            android:hint="@string/activity_login_password_edit_text" />
+            android:hint="@string/activity_login_password_edit_text"
+            android:inputType="textPassword" />
 
         <Button
             android:layout_width="match_parent"
