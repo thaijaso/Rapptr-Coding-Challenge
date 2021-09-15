@@ -12,7 +12,6 @@
         android:layout_marginTop="@dimen/animation_activity_logo_margin_top"
         android:layout_marginLeft="@dimen/animation_activity_logo_margin_left"
         android:layout_marginRight="@dimen/animation_activity_logo_margin_right"
-        android:layout_centerHorizontal="true"
         android:src="@drawable/gpc_logo" />
     
     <Button
